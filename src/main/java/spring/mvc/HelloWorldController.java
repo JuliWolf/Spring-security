@@ -43,4 +43,22 @@ public class HelloWorldController {
 
         return "helloworld";
     }
+
+    @RequestMapping("/processFormVersionThree")
+    public String processFormVersionThree(
+        @RequestParam(name = "studentName") String theName,
+        Model model
+    ) {
+        // convert the data to all caps
+        theName = theName.toUpperCase();
+
+        // create the message
+        String result = "Hey My Friend from v3! " + theName;
+
+        // add message to the model
+        model.addAttribute("studentName", theName);
+        model.addAttribute("message", result);
+
+        return "helloworld";
+    }
 }
