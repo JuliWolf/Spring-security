@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Locale;
 
 @Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 
     // need a controller method to show the initial HTML form
