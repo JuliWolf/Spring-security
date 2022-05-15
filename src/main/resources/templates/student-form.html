@@ -9,18 +9,25 @@
 <form th:action="@{processForm}" th:object="${student}">
     First name: <input th:field="*{firstName}" />
 
-    <br> <br>
+    <br><br>
 
     Last name: <input th:field="*{lastName}" />
 
-    <br> <br>
+    <br><br>
 
     Country
     <select th:field="*{country}">
         <option th:each="country : ${student.countryOptions}" th:value="${country.key}" th:text="${country.value}"></option>
     </select>
 
-    <br> <br>
+    <br><br>
+
+    Java <input type="radio" th:field="*{favoriteLanguage}" th:value="'Java'" />
+    C# <input type="radio" th:field="*{favoriteLanguage}" th:value="'C#'" />
+    Python <input type="radio" th:field="*{favoriteLanguage}" th:value="'Python'" />
+    Javascript <input type="radio" th:field="*{favoriteLanguage}" th:value="'Javascript'" />
+
+    <br><br>
 
     <input type="submit" value="Submit">
 </form>
