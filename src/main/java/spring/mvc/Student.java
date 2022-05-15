@@ -6,9 +6,9 @@ public class Student {
 
     private String lastName;
 
-    public Student () {
+    private String country;
 
-    }
+    public Student () {}
 
     public String getLastName() {
         return lastName;
@@ -25,5 +25,13 @@ public class Student {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 }
