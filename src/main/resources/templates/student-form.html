@@ -17,10 +17,7 @@
 
     Country
     <select th:field="*{country}">
-        <option th:value="Brazil" th:text="Brazil"></option>
-        <option th:value="France" th:text="France"></option>
-        <option th:value="Germany" th:text="Germany"></option>
-        <option th:value="India" th:text="India"></option>
+        <option th:each="country : ${student.countryOptions}" th:value="${country.key}" th:text="${country.value}"></option>
     </select>
 
     <br> <br>
