@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Home Page</title>
@@ -7,6 +7,13 @@
 <body>
   <h2>Home Page</h2>
   Welcome to the home page
+
+<!--  display user name and role -->
+  <p>
+    Logged user: <span sec:authentication="name"></span>
+    <br>
+    Roles: <span sec:authentication="principal.authorities"></span>
+  </p>
 
 <!-- Add a logout button -->
   <form th:action="@{/logout}" method="post">
