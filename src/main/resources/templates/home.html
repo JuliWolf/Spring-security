@@ -7,5 +7,10 @@
 <body>
   <h2>Home Page</h2>
   Welcome to the home page
+
+<!-- Add a logout button -->
+  <form th:action="@{/logout}" method="post">
+    <button type="submit">Logout</button>
+  </form>
 </body>
 </html>
