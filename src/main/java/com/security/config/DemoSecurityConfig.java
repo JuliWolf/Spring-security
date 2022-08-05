@@ -46,6 +46,6 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Bean
   public PasswordEncoder passwordEncoder() {
-    return new PasswordEncoderTest();
+    return new BCryptPasswordEncoder();
   }
 }
