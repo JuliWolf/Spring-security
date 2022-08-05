@@ -15,6 +15,15 @@
     Roles: <span sec:authentication="principal.authorities"></span>
   </p>
 
+  <hr>
+
+<!--   Add a link to point to /leaders ... this is for the managers -->
+  <p>
+    <a th:href="@{/leaders}">LeaderShip Meeting</a>
+    (Only for Manager peeps)
+  </p>
+  <hr>
+
 <!-- Add a logout button -->
   <form th:action="@{/logout}" method="post">
     <button type="submit">Logout</button>
